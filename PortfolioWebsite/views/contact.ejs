@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Contacts Page</title>
+    <link rel="stylesheet" type="text/css" href="/mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        body {background-color: #EDE4E0;}</style>
+</head>
+
+    <table>
+        <!------------------To Organize The Page Use Table----------------->
+        <thead>
+            <!--------------------------navigation bar----------------------->
+            <tr>
+                <th id="menu">
+                    <ul>
+                        <li><a href="/Index.html">About Me</a></li>
+                        <li><a href="Projects.html">Projects</a></li>
+                        <li><a style="text-decoration: underline #F08080 4px; color:#F1A40E; text-underline-offset: 7px;" href="PortfolioWebsite/views/contact.ejs">Contact</a></li>
+                    </ul>
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!--------------------------body content----------------------->
+
+            <tr>
+                
+                <td>
+                    <h1 class="bigtitle"> Get In Touch With Me</h1>
+
+                    <form id="AboutMeForm" method="post" action="/send">
+                        
+                        <div class="form-inner">
+                            <h2 class="formheader"> Get In Touch</h2>
+                            <div class="mb-3">
+                            <input type="text" placeholder="name" name="name" id="input1" onfocus="helpText(0)"
+                                onblur="helpText(4)">
+                                <% if(errors && errors.name) { %>
+                                    <span class="text-danger"><%= errors.name.msg %></span>
+                                    <% } %>
+                                </div>
+                            <input type="email" placeholder="email" name="email"  id="input2" onkeyup="handleOnKeyUp(this)"
+                                onfocus="helpText(1)" onblur="helpText(4)">
+                                <% if (errors && errors.email) { %>
+                                    <span class="text-danger"><%= errors.email.msg %></span>
+                                    <% } %>
+                                    <input type="text" placeholder="subject" name="subject"  id="input2" onkeyup="handleOnKeyUp(this)"
+                                    onfocus="helpText(1)" onblur="helpText(4)">
+                                    <% if (errors && errors.subject) { %>
+                                        <span class="text-danger"><%= errors.subject.msg %></span>
+                                        <% } %>
+                                
+                            
+
+                            <textarea id="textarea1" placeholder="Message..." name="message" rows="5" onkeyup="handleOnKeyUp(this)"
+                                onfocus="helpText(2)" onblur="helpText(4)"></textarea>
+                                <% if(errors && errors.message) { %>
+                                    <span class="text-danger"><%= errors.message.msg %></span>
+                                    <% } %>
+
+
+                            <button class="send" type="submit" value="Send" onfocus="helpText(3)" onblur="helpText(4)">Send
+                                message</button>
+                            
+                            <p id="cont1"></p>
+                        </div>
+                        <div class="form-left-decoration"></div>
+                        <div class="form-right-decoration"></div>
+                        <div class="circle"></div>
+                       
+                    </form>
+                     <!--i have problem here -->
+                    <!--<div style="position: absolute;padding-left: 55%;margin-top: -34%;">
+                        <svg width="6" height="310" viewBox="0 0 6 563" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.5 3.00012L3.47138 560" stroke="#F08080" stroke-width="5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>-->
+
+
+                    <!-- Left contact page -->
+
+                    <div class="direct-contact-container">
+
+                        <ul class="contact-list">
+                            <li class="list-item"><i class="fa fa-map-marker fa-2x"><span
+                                        class="contact-text place">Jeddah, Saudi Arabia</span></i></li>
+
+
+                            <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a
+                                            href="mailto:RafaGhamri@gmail.com"
+                                            title="Send me an email">RafaGhamri@gmail.com</a></span></i>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </td>
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+            <!--------------------------Footer content----------------------->
+            <tr>
+                <th id="footer">
+                    <div class="copyright">
+                        <ul class="contact">
+                            <li><a href="https://www.linkedin.com/in/rafaghamri/" class="fa fa-linkedin"> </a> </li>
+                            <li><a href="https://github.com/Rafaghamri" class="fa fa-github"> </a></li>
+                            <li><a href="mailto:rafaghamri@gmail.com" class="fa fa-envelope"></a></li>
+                        </ul>
+                        <p> Copyright 2023 © Rafa Ghamri</p>
+                    </div>
+                </th>
+            </tr>
+        </tfoot>
+    </table>
+
+   
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<!------------------------head------------------------------>
+
+<head>
+    <meta charset="utf-8">
+    <title>Projects Page</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<!----------------------------body------------------------------->
+
+<body>
+
+    <table>
+        <!------------------To Organize The Page Use Table----------------->
+        <thead>
+            <!--------------------------navigation bar----------------------->
+            <tr>
+                <th id="menu">
+                    <ul>
+                        <li><a href="Index.html">About Me</a></li>
+                        <li><a style="text-decoration: underline #F08080 4px; color:#F1A40E; text-underline-offset: 7px;"
+                                href="Projects.html">Projects</a></li>
+                        <li><a href="views/contact.ejs">Contact</a></li>
+                    </ul>
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!--------------------------body content----------------------->
+
+            <tr><!--First row on body-->
+                <td>
+                    <h1 class="bigtitle">What I do !</h1>
+                    <div> <a class="box-1" style="text-decoration: none; color: #F08080;" href="SProjectsPage.html">
+                            <img src="Images/UIUX.png" alt="UI/UX icon" id="icons">
+                            <p> UI/UX </p>
+                        </a>
+                    </div>
+
+                    <div> <a class="box-1" style="text-decoration: none; color: #F08080;" href="SProjectsPage.html">
+                            <img src="Images/UIUX.png" alt="UI/UX icon" id="icons">
+                            <p> Web Design </p>
+                        </a>
+                    </div>
+
+                    <div> <a class="box-1" style="text-decoration: none; color: #F08080;" href="SProjectsPage.html">
+                            <img src="Images/UIUX.png" alt="UI/UX icon" id="icons">
+                            <p> Web Development </p>
+                        </a>
+                    </div>
+                    
+                </td>
+
+                <!--<td>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="Images/UIUX.png" alt="Avatar" style="width:300px;height:300px;">
+                          </div>
+                          <div class="flip-card-back">
+                            <h1>John Doe</h1> 
+                            <p>Architect & Engineer</p> 
+                            <p>We love that guy</p>
+                          </div>
+                        </div>
+                      </div>
+                </td>-->
+
+                <!--<td>
+                    <div class="Donations">
+                        <h1><i>Light up someone's life</i></h1>
+                        <p><i>" Be a Donor "</i></p>
+                    </div>
+
+                    <div class="slideshow">
+                        <div class="slide-wrapper">
+                            <div class="image-container"></div>
+                            <div class="image-container"></div>
+                            <div class="image-container"></div>
+                            <div class="image-container"></div>
+                            <div class="image-container"></div>
+                        </div>
+                    </div>
+                    <br><br>
+                </td>-->
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+            <!--------------------------Footer content----------------------->
+            <tr>
+                <th id="footer">
+                    <div class="copyright">
+                        <ul class="contact">
+                            <li><a href="https://www.linkedin.com/in/rafaghamri/" class="fa fa-linkedin"> </a> </li>
+                            <li><a href="https://github.com/Rafaghamri" class="fa fa-github"> </a></li>
+                            <li><a href="mailto:rafaghamri@gmail.com" class="fa fa-envelope"></a></li>
+                        </ul>
+                        <p> Copyright 2023 © Rafa Ghamri</p>
+                    </div>
+                </th>
+            </tr>
+        </tfoot>
+    </table>
+    <script>
+
+        // -------------- Form Processing by using JavaScript ------------------
+
+        function handleOnMouseOver(ev) {
+            ev.style.color = "#7A1324";
+        }
+
+        function handleOnMouseOut(ev) {
+            ev.style.color = "#b99534";
+        }
+
+    </script>
+</body>
+
+</html>

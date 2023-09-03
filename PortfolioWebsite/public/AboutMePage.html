@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+<!------------------------head------------------------------>
+
+<head>
+    <meta charset="utf-8">
+    <title>About us</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<!----------------------------body------------------------------->
+
+<body>
+
+    <table>
+        <!------------------To Organize The Page Use Table----------------->
+        <thead>
+            <!--------------------------navigation bar----------------------->
+            <tr>
+                <th id="menu">
+                    <ul>
+                        <li><a href="Index.html">About Me</a></li>
+                         <!--<li><a href="DonatePage.html">Experience</a></li>-->
+                        <li><a href="PreviousDonation.html">Project</a></li>
+                        <li><a style="text-decoration: underline #F08080 4px; color:#F1A40E; text-underline-offset: 7px;" href="AboutUsPage.html">Contact</a></li>
+                    </ul>
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!--------------------------body content----------------------->
+
+            <tr>
+                
+                <td>
+                    <h1 class="bigtitle">Get In Touch With Me</h1>
+
+                    
+                    <form id="AboutUsForm" method="post" action="AboutUsPage.html">
+                        
+                        <div class="form-inner">
+                            <h2 class="formheader">Get In Touch</h2>
+                            
+                            <input type="text" placeholder="Name" id="input1" onfocus="helpText(0)"
+                                onblur="helpText(4)">
+                            <input type="email" placeholder="Email" id="input2" onkeyup="handleOnKeyUp(this)"
+                                onfocus="helpText(1)" onblur="helpText(4)">
+
+                            <textarea id="textarea1" placeholder="Message..." rows="5" onkeyup="handleOnKeyUp(this)"
+                                onfocus="helpText(2)" onblur="helpText(4)"></textarea>
+
+
+                            <button class="send" type="submit" value="Send" onfocus="helpText(3)" onblur="helpText(4)">Send
+                                message</button>
+                            
+                            <p id="cont1"></p>
+                        </div>
+                        <div class="form-left-decoration"></div>
+                        <div class="form-right-decoration"></div>
+                        <div class="circle"></div>
+                       
+                    </form>
+                     <!--i have problem here -->
+                    <!--<div style="position: absolute;padding-left: 55%;margin-top: -34%;">
+                        <svg width="6" height="310" viewBox="0 0 6 563" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.5 3.00012L3.47138 560" stroke="#F08080" stroke-width="5"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>-->
+
+
+                    <!-- Left contact page -->
+
+                    <div class="direct-contact-container">
+
+                        <ul class="contact-list">
+                            <li class="list-item"><i class="fa fa-map-marker fa-2x"><span
+                                        class="contact-text place">Jeddah, Saudi Arabia</span></i></li>
+
+                           <!---- <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a
+                                            href="tel:+966544688710" title="Give me a call">+966
+                                            544688710</a></span></i></li>-->
+
+                            <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a
+                                            href="mailto:RafaGhamri@gmail.com"
+                                            title="Send me an email">RafaGhamri@gmail.com</a></span></i>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </td>
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+            <!--------------------------Footer content----------------------->
+            <tr>
+                <th id="footer">
+                    <div class="copyright">
+                        <ul class="contact">
+                            <li><a href="https://www.linkedin.com/in/rafaghamri/" class="fa fa-linkedin"> </a> </li>
+                            <li><a href="https://github.com/Rafaghamri" class="fa fa-github"> </a></li>
+                            <li><a href="mailto:rafaghamri@gmail.com" class="fa fa-envelope"></a></li>
+                            <!-----<li><a href="callto:+966544688710" class="fa fa-phone"> </a></li>-->
+                        </ul>
+                        <p> Copyright 2023 © Rafa Ghamri</p>
+                    </div>
+                </th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        // -------------- Form Processing by using JavaScript ------------------
+
+        /*function handleOnKeyUp(ev) {
+            ev.value = ev.value.toUpperCase();
+        }*/
+
+        function handleOnMouseOver(ev) {
+            ev.style.color = "#F08080";
+        }
+
+        function handleOnMouseOut(ev) {
+            ev.style.color = "#F08080";
+
+        }
+        // --------------------------  Anonymous function form ( send )-----------------------
+
+        var aboutUsSend_var = document.getElementById("AboutUsForm");
+        aboutUsSend_var.addEventListener("submit", function () {
+            return confirm("Are you sure you want to send?");
+        }, false);
+
+        var aboutUsSend_varReset = document.getElementById("AboutUsForm");
+        aboutUsSend_varReset.addEventListener("reset", function () {
+            return confirm("Are you sure you want to reset the About us form?");
+        }, false);
+
+        //-------------------------- Tab key to move between form element -----------------------// 
+
+        var helpArray = ["Enter your name in this input box.", "Enter your e-mail address in the format user@domail.",
+            "In this box, enter any comments you would.", "This button submits the form to the server-side script.", ""];
+
+        function helpText(messageNum) {
+            document.getElementById("cont1").innerHTML =
+                helpArray[messageNum];
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
